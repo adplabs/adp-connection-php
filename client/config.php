@@ -31,7 +31,7 @@ governing permissions and limitations under the License.
 	//--------------------------------------------------------------------------------------
 	// The root URL of the api calls.  Will be different between testing and production.
 	//--------------------------------------------------------------------------------------
-   	$ADP_APIROOT  = "https://iat-api.adp.com/";
+   	$ADP_APIROOT  = "https://api.adp.com/";
 
    	//--------------------------------------------------------------------------------------
    	// The location, on disk, of the certificate for the server.

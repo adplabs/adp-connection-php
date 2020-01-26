@@ -1,6 +1,6 @@
 <?php
 
-	$ADP_APIROOT  = "https://iat-api.adp.com/";
+	$ADP_APIROOT  = "https://api.adp.com/";
 	$ADP_CERTFILE = "../../connection/client/certs/apiclient_iat.pem";
 	$ADP_KEYFILE  = "../../connection/client/certs/apiclient_iat.key";
 	$ADP_CC_CLIENTID = "88a73992-07f2-4714-ab4b-de782acd9c4d";
