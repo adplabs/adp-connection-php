@@ -1,0 +1,31 @@
+version: '2'
+services:
+  web:
+    image: medtrainermx/php:5.6
+    extra_hosts:
+      - "adp.local.com:127.0.0.1"
+    expose:
+      - "9000"
+    ports:
+      - "8090:80"
+    networks:
+      adp_net:
+        ipv4_address: 172.18.20.2
+    volumes:
+      - ./:/var/www/html
+      - ./apache_vhost:/etc/apache2/sites-available/
+    environment:
+      PHP_XDEBUG_ENABLED: 1
+      XDEBUG_CONFIG: remote_host=172.18.20.1
+      PHP_IDE_CONFIG: "serverName=Backend"
+    container_name: adp_web
+networks:
+  adp_net:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.20.0/24
+          gateway: 172.18.20.1
